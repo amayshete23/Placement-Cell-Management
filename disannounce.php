@@ -1,0 +1,163 @@
+<html>
+<head>
+ <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+     background-image: url('Pink-Blue-Blured-Texture.jpg');
+     background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: 100%;
+    }
+</style>
+
+  
+</head>
+<body>
+
+<style>
+
+ footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0);
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    color: #000000;
+}
+	.footer-bottom{
+    background: rgba(255,255,255,0);
+    width: 80vw;
+    padding: 4px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 10px;
+    word-spacing: 4px;
+    text-transform: capitalize;
+}
+
+
+</style>
+
+<link href="style1.css" rel="stylesheet" type="text/css">
+     <div class="container-fluid p-3 my-3 bg-dark text-white" style="height:130px" >
+   <img src="logo.jpeg" class="rounded float-left" style="width:100px;height:100px;">
+	
+	<center> 
+	<h2> Brihan Maharashtra College of Commerce </h2>
+	<h3> Placement Cell Management </h3>
+	</center>
+	</div>
+	&nbsp;<button type="button" style="height:40px;width:60px" class="btn btn-primary " onclick="history.back()"><b>Back</b></button>&nbsp;	
+
+<center>
+ <h1> Announcement</h1>
+</center>
+<br>
+<center>
+<footer>
+        <div class="footer-bottom">
+            <p><h6>copyright &copy;2021 BMCC Placement Cell. designed by Group I</h6></p>
+        </div>
+    </footer></center>
+</body
+</html>
+
+
+
+<?php
+// Username is root
+$username = "root";
+$password = "";
+
+
+// Database name is 
+$database = "placementdb";
+
+// Server is localhost with
+// port number 3308
+$servername="localhost";
+global $result;
+$mysqli = new mysqli("localhost","root","" ,"placementdb");
+
+// Checking for connections
+//if ($mysqli->connect_error) {
+	//die('Connect Error (' .
+	//$mysqli->connect_errno . ') '.
+	//$mysqli->connect_error);
+
+
+ //SQL query to select data from database
+ $sql = "select * from anouncement order by date desc";
+ 
+ $result = $mysqli->query($sql);
+ 
+//if($result== 1)
+ //{ 
+ //   header("location: studash.php"); 
+// }
+//else
+ //{ 
+  //  echo " <script>alert('No New Announcement'); window.location='stulogin.php'</script> ";
+ //}
+   if ($mysqli -> connect_errno) {
+   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+   exit();
+}
+    // $row=$result->fetch_assoc();
+	// $row['id']=1;
+	 //while ($row['id']<1000)
+	 
+		   
+		//   { 
+	 
+	 		 
+	 //printf (" %s\n,%s\n", $row["date"] ,$row["desc"]);
+	 //$row['id']++;
+	      // }
+	
+	 
+// Free result set
+   // $result -> free_result();
+    if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo   " Date:&nbsp&nbsp " . $row["date"]. " &nbsp&nbspDescription:&nbsp&nbsp" . $row["desc"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+	 
+	
+				//<!--FETCHING DATA FROM EACH
+				//	ROW OF EVERY COLUMN-->
+				// echo $rows['id'];
+				 //echo $rows['date'];
+				 //echo $rows['desc'];
+				
+	
+		
+    $mysqli->close();
+
+
+			
+?>			 
+
+
+
+				
+			
+			
+			
+			
+			
+		

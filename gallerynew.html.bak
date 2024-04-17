@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Gallery</title>
+
+<link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+
+<style type="text/css">
+   body {
+     background-image: url('Pink-Blue-Blured-Texture.jpg');
+     background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: 100%;
+    }
+ 
+ *{
+   margin: 0px;
+}
+
+h1{
+ text-align: center;
+}
+p{
+ font-size: 55px;
+}
+
+header{
+
+font-family: 'Dokdo', cursive;
+font-size: 30px;
+padding: 20px;
+}
+main{
+      margin-left: 120px;
+        width: 100%;
+        margin-top: 40px;
+}
+.box{
+ width: 20%;
+ float: left;
+ padding: 7px;
+ padding-left: 10px;  
+ display: block;
+
+}
+
+img{
+ width: 100%;
+    border-radius: 4px;
+
+}
+
+img:hover{
+  transform: scale(1.3,1.3);
+  transition: .3s transform;
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0);
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    color: #000000;
+}
+	.footer-bottom{
+    background: rgba(255,255,255,0);
+    width: 80vw;
+    padding: 4px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 10px;
+    word-spacing: 4px;
+    text-transform: capitalize;
+}
+</style>
+
+</head>
+<body>
+<header>
+ 
+ <h1>
+BMCC PLACEMENT CELL <p>BMCC Gallery</p>
+</h1>
+<hr/>
+
+</header>
+
+<main>
+ <div class="box">
+<img src="image1.jpeg"></div>
+<div class="box">
+<img src="image2.jpeg"></div>
+<div class="box">
+<img src="image3.jpeg"></div>
+<div class="box">
+<img src="image8.jpeg"></div>
+<div class="box">
+<img src="image5.jpeg"></div>
+<div class="box">
+<img src="image6.jpeg"></div>
+<div class="box">
+<img src="image7.jpeg"></div>
+<div class="box">
+<img src="image4.jpeg"></div>
+
+</main>
+
+<center>
+<footer>
+        <div class="footer-bottom">
+            <p><h6>copyright &copy;2021 BMCC Placement Cell. designed by Group I</h6></p>
+        </div>
+    </footer>
+</body>
+</html>
